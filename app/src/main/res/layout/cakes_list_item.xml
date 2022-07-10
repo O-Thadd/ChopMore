@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FlexFragment">
+
+    <data>
+
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cake_imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/Image.RoundCorners"
+                app:srcCompat="@drawable/unsplash_clpdea23z44" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_card_big_selected"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/cake_imageView"
+                app:layout_constraintStart_toStartOf="@id/cake_imageView"
+                app:layout_constraintTop_toBottomOf="@id/cake_imageView" />
+
+
+            <TextView
+                android:id="@+id/cakeName_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/rock_salt"
+                android:maxLines="1"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/cake_imageView"
+                app:layout_constraintStart_toStartOf="@id/cake_imageView"
+                app:layout_constraintTop_toBottomOf="@id/cake_imageView"
+                tools:text="Yummy Queen's Cake" />
+
+            <ImageView
+                android:id="@+id/rating_imageView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-8dp"
+                android:src="@drawable/group_1_rating"
+                app:layout_constraintStart_toStartOf="@id/cakeName_textView"
+                app:layout_constraintTop_toBottomOf="@id/cakeName_textView" />
+
+            <TextView
+                android:id="@+id/price_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="#25,000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/cakeName_textView"
+                app:layout_constraintTop_toBottomOf="@id/rating_imageView"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+</layout>

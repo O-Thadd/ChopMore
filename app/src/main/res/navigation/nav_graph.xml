@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/flexFragment">
+
+    <fragment
+        android:id="@+id/flexFragment"
+        android:name="com.othadd.chopmore.FlexFragment"
+        android:label="fragment_flex"
+        tools:layout="@layout/fragment_flex" >
+        <action
+            android:id="@+id/action_flexFragment_to_loginSignUpFragment"
+            app:destination="@id/loginSignUpFragment"
+            app:popUpTo="@id/flexFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginSignUpFragment"
+        android:name="com.othadd.chopmore.LoginSignUpFragment"
+        android:label="fragment_login_sign_up"
+        tools:layout="@layout/fragment_login_sign_up" >
+        <action
+            android:id="@+id/action_loginSignUpFragment_to_landingFragment"
+            app:destination="@id/landingFragment"
+            app:popUpTo="@id/loginSignUpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.othadd.chopmore.LandingFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing" />
+</navigation>

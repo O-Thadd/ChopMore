@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Image.RoundCorners" parent="">
+        <item name="cornerSizeTopRight">75px</item>
+        <item name="cornerSizeTopLeft">75px</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+</resources>
